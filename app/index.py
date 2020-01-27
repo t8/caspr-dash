@@ -5,7 +5,7 @@ from flask import Flask, render_template, make_response
 from functools import wraps, update_wrapper
 from datetime import datetime
 from flask_socketio import SocketIO, emit
-from serialCommunicationCommands import runTest
+from serialCommunicationCommands import * as sCommands
 
 app = Flask(__name__)
 socketio = SocketIO(app)
@@ -21,7 +21,7 @@ def receive(data):  # test_message() is the event callback function.
     newSpeed = float(fixedData['stepperSpeed'])
     print(fixedData["stepperSpeed"])
     testdata = ["<BOTHSTEP," + str(newSpeed) + ",FOR>"]
-    runTest(testdata)
+    sCommands.runTest(testdata)
     emit('response', {'data': 'got it!'})  # Trigger a new event called "my response"
 
 
