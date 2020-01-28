@@ -151,4 +151,8 @@ serPort = "/dev/ttyACM0"
 baudRate = 9600
 ser = serial.Serial(serPort, baudRate)
 
-waitForArduino()
+# waitForArduino()
+#
+# testData = ["<LEFTSTEP,3000.0,FOR>", "<RIGHTSTEP,3000.0,FOR>", "<HALT,0,ARB>", "<BOTHSTEP,3000.0,BCK>"]
+#
+# runTest(testData)
