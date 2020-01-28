@@ -150,3 +150,5 @@ print
 serPort = "/dev/ttyACM0"
 baudRate = 9600
 ser = serial.Serial(serPort, baudRate)
+
+waitForArduino()
