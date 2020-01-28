@@ -101,7 +101,7 @@ if __name__ == '__main__':
     endMarker = 62
 
     waitForArduino()
-    socketio.run(app, host='0.0.0.0', port=80, debug=True)
+    socketio.run(app, host='0.0.0.0', port=80)
 #    app.run(host='0.0.0.0', port=80, debug=True)
 
 #
